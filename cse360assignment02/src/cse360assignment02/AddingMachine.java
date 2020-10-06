@@ -1,8 +1,9 @@
 package cse360assignment02;
-
+import java.util.*;
 public class AddingMachine {
-	private int total;	
-	  
+	 private int total;
+	
+	 private String tostr="0 ";  
 	 /**
 	   * This method is the constructor of AddingMachine. 
 	   * @param Unused
@@ -15,10 +16,10 @@ public class AddingMachine {
 	  /**
 	   * This method is used to get toal sum. 
 	   * @param Unused
-	   * @return int 0 
+	   * @return total value 
 	   */
 	  public int getTotal () {
-	    return 0;
+	    return total;
 	  }
 	  
 	  /**
@@ -27,6 +28,8 @@ public class AddingMachine {
 	   * @return nothing 
 	   */
 	  public void add (int value) {
+		  total+=value;
+        tostr+="+ "+value+" ";
 	  }
 	  
 	  /**
@@ -35,15 +38,17 @@ public class AddingMachine {
 	   * @return nothing 
 	   */
 	  public void subtract (int value) {
+		  total-=value;
+        tostr+="- "+value+" ";
 	  }
 
 	  /**
 	   * This method is used to print out the outcome in string type
 	   * @param Unused
-	   * @return a string 
+	   * @return a string shows the total value in natural language
 	   */
 	  public String toString () {
-	    return "";
+	    return tostr;
 	  }
 	  
 	  /**
@@ -52,6 +57,7 @@ public class AddingMachine {
 	   * @return nothing 
 	   */
 	  public void clear() {
-	  }
+		  total=0;
+        }
 
 }
